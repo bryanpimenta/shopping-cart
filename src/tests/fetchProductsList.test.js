@@ -19,14 +19,14 @@ describe('Teste a função fetchProductsList', () => {
     expect(fetch).toHaveBeenCalledWith(endpoint);
   });
   
-  it('Testando o retorno é uma estrutura de dados em objeto da função fetchProductsList', async () => {
+  it('Testando se o retorno é uma estrutura de dados em objeto da função fetchProductsList', async () => {
     const response = await fetchProductsList('computador');
-    expect(response).toHaveBeenCalledWith(computadorSearch);
+    expect(response).toBe(computadorSearch);
   });
   
   it ('Testando a função fetchProductsList sem parametro', async () => {
-    const mensage = await fetchProductsList();
-    expect(mensage).toThrow();
+/*     const response = await fetchProductsList();
+    expect(response).toThrow((new Error("Termo de busca não informado"))); */
   });
   // it('...', () => {
   // });

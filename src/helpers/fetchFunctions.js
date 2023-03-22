@@ -1,4 +1,4 @@
-import { createProductElement } from "./shopFunctions";
+/* import { createProductElement } from "./shopFunctions"; */
 
 export const fetchProduct = () => {
   // seu código aqui

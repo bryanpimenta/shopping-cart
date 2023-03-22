@@ -9,9 +9,8 @@ export const fetchProductsList = async (QUERY) => {
 
   try {
     const LINK = `https://api.mercadolibre.com/sites/MLB/search?q=${QUERY}`;
-    const response = await fetch(LINK);
-    const data = await response.json();
-    const dados = data;
+    const dados = await fetch(LINK)
+      .then((res) => res.json());
     const { results } = dados;
 
     return results;

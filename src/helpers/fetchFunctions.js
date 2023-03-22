@@ -1,5 +1,3 @@
-/* import { createProductElement } from "./shopFunctions"; */
-
 export const fetchProduct = () => {
   // seu código aqui
 };

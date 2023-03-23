@@ -18,7 +18,7 @@ describe('Teste a função fetchProduct', () => {
   });
   it('Testando se o retorno é igual ao objeto `product`', async () => {
     const res = await fetchProduct("MLB1405519561");
-    expect(res).toBe(product);
+    expect(res).toEqual(product);
   });
   it('Testando a função sem parametro', async () => {
     const res = await fetchProduct();

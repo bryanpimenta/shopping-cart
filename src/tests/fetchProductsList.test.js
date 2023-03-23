@@ -25,9 +25,7 @@ describe('Teste a função fetchProductsList', () => {
   });
   
   it ('Testando a função fetchProductsList sem parametro', async () => {
-/*     const response = await fetchProductsList();
-    expect(response).toThrow((new Error("Termo de busca não informado"))); */
+    const response = await fetchProductsList();
+    expect(response).toThrow((new Error("Termo de busca não informado")));
   });
-  // it('...', () => {
-  // });
 });

@@ -5,8 +5,8 @@
   "scripts": {
     "start": "vite",
     "build": "vite build",
-    "preview": "vite preview --port 8080",
-    "dev": "vite --open",
+    "preview": "vite preview",
+    "vite": "vite --open",
     "test": "jest --watchAll",
     "test:coverage": "jest --coverage",
     "cy": "cypress run",

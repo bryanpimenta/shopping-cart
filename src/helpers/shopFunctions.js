@@ -8,7 +8,7 @@ const calculationValue = async () => {
   priceToElements.forEach((item) => {
     value += Number(item.innerHTML);
   });
-  totalPrice.innerText = value;
+  totalPrice.innerText = value.toFixed(2);
 };
 
 // Esses comentários que estão antes de cada uma das funções são chamados de JSdoc,
@@ -72,6 +72,7 @@ const removeCartProduct = (li, id) => {
  * @returns {Element} Elemento de um product do carrinho.
  */
 export const createCartProductElement = ({ id, title, price, pictures }) => {
+  const priceFixed = price.toFixed(2);
   const li = document.createElement('li');
   li.className = 'cart__product';
   const imgContainer = createCustomElement('div', 'cart__product__image-container');
@@ -87,7 +88,7 @@ export const createCartProductElement = ({ id, title, price, pictures }) => {
   const infoContainer = createCustomElement('div', 'cart__product__info-container');
   infoContainer.appendChild(createCustomElement('span', 'product__title', title));
   const priceElement = createCustomElement('span', 'product__price', 'R$ ');
-  priceElement.appendChild(createCustomElement('span', 'product__price__value', price));
+  priceElement.appendChild(createCustomElement('span', 'product__price__value', priceFixed));
   infoContainer.appendChild(priceElement);
 
   li.appendChild(infoContainer);
@@ -113,6 +114,7 @@ export const createCartProductElement = ({ id, title, price, pictures }) => {
  * @returns {Element} Elemento de produto.
  */
 export const createProductElement = ({ id, title, thumbnail, price }) => {
+  const priceFixed = price.toFixed(2);
   const section = document.createElement('section');
   section.className = 'product';
 
@@ -125,7 +127,7 @@ export const createProductElement = ({ id, title, thumbnail, price }) => {
   section.appendChild(createCustomElement('span', 'product__title', title));
 
   const priceElement = createCustomElement('span', 'product__price', 'R$ ');
-  priceElement.appendChild(createCustomElement('span', 'product__price__value', price));
+  priceElement.appendChild(createCustomElement('span', 'product__price__value', priceFixed));
   section.appendChild(priceElement);
 
   const cartButton = createCustomElement(
